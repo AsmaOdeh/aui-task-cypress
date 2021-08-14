@@ -12,7 +12,7 @@ navigateToTheDevicePage(longwait){
      
      cy.visit('https://www.samsung.com/in/smartphones/galaxy-z-fold2/buy/')
      cy.wait(longwait)
-     cy.get('a[title="CONTINUE"][an-tr="price bar_add to cart-flagship pdp-button-text"]').should('be.visible')  
+     cy.get('a[class="cta cta--contained cta--emphasis add-to-cart-btn"]').should('be.visible')  
 }
 
 clickOnAddToCartButton(longwait){
