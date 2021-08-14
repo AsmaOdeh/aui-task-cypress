@@ -10,3 +10,5 @@ jobs:
         uses: cypress-io/github-action@v2
         with:
           start: npm start
+          wait-on: 'https://www.samsung.com/in/'
+          wait-on-timeout: 120

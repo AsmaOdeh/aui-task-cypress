@@ -46,7 +46,7 @@ describe('Purchase a device from Samsung website', () => {
         samsungPages.clickOnContinueAsGuest(longwait)
     })
 
-    it('Click on pin code field', () => {
+    it('Click on pin code field and verify if the error message is displayed', () => {
         cy.wait(longwait)
 
         //click on pin code without filling the field to make sure that the error is displayed 
