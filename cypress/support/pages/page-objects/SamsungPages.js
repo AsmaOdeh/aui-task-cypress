@@ -61,4 +61,8 @@ export class SamsungPages {
   clickShippingLabel(){
     cy.get(pageSelectors.shippingLabel).click()
   }
+
+  notEmptyShoppingCart(){
+    return cy.get(pageSelectors.postalCode).length
+  }
 }

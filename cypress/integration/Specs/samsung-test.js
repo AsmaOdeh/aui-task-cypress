@@ -30,11 +30,15 @@ describe('Purchase a device from Samsung website', () => {
     })
 
     it('Click on pin code field and verify if the error message is displayed', () => {
+        if (samsungPages.notEmptyShoppingCart) {
         samsungPages.clickPinCode()
         samsungPages.clickShippingLabel()
         samsungPages.verifyErrorMessageDisplayed(true)
         samsungPages.typePinCode(pinCode)
         samsungPages.verifyErrorMessageDisplayed(false)
+    } else {
+        console.log('Empty shopping cart')
+      }
     })
 })
 
