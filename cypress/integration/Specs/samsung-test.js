@@ -30,7 +30,9 @@ describe('Purchase a device from Samsung website', () => {
     })
 
     it('Click on pin code field and verify if the error message is displayed', () => {
-        if (samsungPages.notEmptyShoppingCart) {
+        
+        cy.get("body").then($body => {
+        if ($body.find('input[type="text"][name="postalCode"]').length > 0) {
         samsungPages.clickPinCode()
         samsungPages.clickShippingLabel()
         samsungPages.verifyErrorMessageDisplayed(true)
@@ -39,6 +41,7 @@ describe('Purchase a device from Samsung website', () => {
     } else {
         console.log('Empty shopping cart')
       }
+    })
     })
 })
 
