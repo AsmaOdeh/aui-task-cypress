@@ -31,6 +31,8 @@ describe('Purchase a device from Samsung website', () => {
 
     it('Click on pin code field and verify if the error message is displayed', () => {
         
+        //Note: I tested this method many times locally and it worked but there is an issue when run it on git actions 
+        
         cy.get("body").then($body => {
         if ($body.find('input[type="text"][name="postalCode"]').length > 0) {
         samsungPages.clickPinCode()
