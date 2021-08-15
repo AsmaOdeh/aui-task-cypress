@@ -44,7 +44,6 @@ export class SamsungPages {
 
   clickOnContinueAsGuest(){
     cy.get(pageSelectors.continueGuest).click({force:true})
-    cy.url().should('include', '/web/cart')
   }
 
   clickPinCode(){

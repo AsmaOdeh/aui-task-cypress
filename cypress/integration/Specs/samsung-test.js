@@ -29,12 +29,12 @@ describe('Purchase a device from Samsung website', () => {
         samsungPages.clickOnContinueAsGuest()
     })
 
-    it('Click on pin code field and verify if the error message is displayed', () => {
+    /*it('Click on pin code field and verify if the error message is displayed', () => {
         samsungPages.clickPinCode()
         samsungPages.clickShippingLabel()
         samsungPages.verifyErrorMessageDisplayed(true)
         samsungPages.typePinCode(pinCode)
         samsungPages.verifyErrorMessageDisplayed(false)
-    })
+    })*/
 })
 
